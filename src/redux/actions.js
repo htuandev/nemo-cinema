@@ -14,7 +14,7 @@ import {
   NEMO,
   TMDB_KEY,
   USER_LOGIN,
-} from "../utils/config";
+} from "../configs/config";
 import moment from "moment";
 import { connectionService } from "../services/connectionServices";
 

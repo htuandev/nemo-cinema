@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_NEWS } from "../utils/config";
+import { API_NEWS } from "../configs/config";
 
 class NewsService {
   get = (url = "") => {

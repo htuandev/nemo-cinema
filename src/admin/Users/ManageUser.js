@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import { SweetAlertWarning, UserModel } from "../../models/models";
 import { deleteUserAction, getUserListAction } from "../../redux/actions";
-import { NEMO } from "../../utils/config";
+import { NEMO } from "../../configs/config";
 import {
   AiOutlineEdit,
   AiOutlineDelete,

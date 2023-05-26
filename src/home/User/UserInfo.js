@@ -2,13 +2,15 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { getAccountInfoAction, putUpdateUserAction } from "../../redux/actions";
-import { NEMO, USER_LOGIN } from "../../utils/config";
+import { NEMO, USER_LOGIN } from "../../configs/config";
 import * as Yup from "yup";
 import { UserModel } from "../../models/models";
 import { useFormik } from "formik";
 import styled from "styled-components";
 import { Form, Input } from "antd";
 import { Breakpoints } from "../../styles/Breakpoints";
+import bg from "../../images/bg.jpg";
+import avatar from "../../images/user.jpg";
 import { StyledButton } from "../../styles/Styles";
 import { LoadingPageV0 } from "../../components/Loading/Loading";
 
@@ -150,7 +152,7 @@ export default function UserInfo() {
         <S.Box>
           <User.Box>
             <S.Col>
-              <User.Avatar src="/images/user.jpg" alt="avatar" />
+              <User.Avatar src={avatar} alt="avatar" />
               <User.Name>{user.hoTen}</User.Name>
             </S.Col>
           </User.Box>
@@ -167,7 +169,7 @@ const S = {
     background-position: center;
     background-repeat: no-repeat;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("images/bg.jpg");
+      url(${bg});
     min-height: 100vh;
     width: 100%;
   `,
@@ -217,9 +219,7 @@ const StyledForm = {
       height: 100%;
     }
     .ant-form-item-label
-      > label.ant-form-item-required:not(
-        .ant-form-item-required-mark-optional
-      )::before {
+      > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
       display: none;
     }
     .error {

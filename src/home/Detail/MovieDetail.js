@@ -7,11 +7,14 @@ import {
   BASE_API_POSTER_URL,
   BASE_API_PERSON_URL,
   USER_LOGIN,
-} from "../../utils/config";
+} from "../../configs/config";
 import * as S from "./MovieDetailElements";
 import { FaPlay } from "react-icons/fa";
 import getVideoId from "get-video-id";
 import moment from "moment";
+import female from "../../images/people-female.svg";
+import noImage from "../../images/no-image.svg";
+import male from "../../images/people-male.svg";
 import { Tabs } from "antd";
 import { LoadingPageV0 } from "../../components/Loading/Loading";
 import { Container, SectionTitle } from "../../styles/Styles";
@@ -97,7 +100,7 @@ export default function MovieDetail() {
                     src={
                       movie.poster_path !== ""
                         ? BASE_API_POSTER_URL + movie.poster_path
-                        : "/images/no-image.svg"
+                        : noImage
                     }
                     alt={movie.title}
                   />
@@ -170,9 +173,9 @@ export default function MovieDetail() {
               <S.Profile
                 src={
                   cast.profile_path === null && cast.gender === 1
-                    ? "/images/people-female.svg"
+                    ? female
                     : cast.profile_path === null
-                    ? "/images/people-male.svg"
+                    ? male
                     : BASE_API_PERSON_URL + cast.profile_path
                 }
                 alt={cast.name}

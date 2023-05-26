@@ -7,7 +7,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getNewsAction, putNewsAction } from "../../redux/actions";
 import { AntDesignForm, AntDesignFormItem } from "../../styles/AntDesign";
 import { Container, Heading, StyledButton } from "../../styles/Styles";
-import { NEMO } from "../../utils/config";
+import { NEMO } from "../../configs/config";
 
 export default function EditNews() {
   document.title = `Edit News - ${NEMO}`;

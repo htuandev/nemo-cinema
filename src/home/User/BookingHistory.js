@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { getAccountInfoAction } from "../../redux/actions";
-import { NEMO, USER_LOGIN } from "../../utils/config";
+import { NEMO, USER_LOGIN } from "../../configs/config";
 import styled from "styled-components";
 import { Container, Heading } from "../../styles/Styles";
+import bg from "../../images/bg.jpg";
 import moment from "moment";
 import { LoadingPageV0 } from "../../components/Loading/Loading";
 
@@ -66,7 +67,7 @@ const S = {
     background-position: center;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("/images/bg.jpg");
+      url(${bg});
     min-height: 100vh;
     width: 100%;
     height: 100%;

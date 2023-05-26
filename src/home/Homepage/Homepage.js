@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Container, Heading } from "../../styles/Styles";
-import { NEMO } from "../../utils/config";
+import { NEMO } from "../../configs/config";
 import Banner from "./Banner";
 import Cinema from "./Cinema";
 import Movies from "./Movies";

@@ -9,7 +9,7 @@ import {
 } from "../../redux/actions";
 import { cyberSoftServices } from "../../services/cyberSoftServices";
 import { Container, Heading, StyledButton } from "../../styles/Styles";
-import { NEMO } from "../../utils/config";
+import { NEMO } from "../../configs/config";
 import moment from "moment";
 import { AntDesignForm, AntDesignFormItem } from "../../styles/AntDesign";
 import { DatePicker, InputNumber, Select } from "antd";

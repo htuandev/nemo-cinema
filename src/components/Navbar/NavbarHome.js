@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FaBars, FaPlus } from "react-icons/fa";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { NavBarLink, TOKEN, USER_LOGIN } from "../../utils/config";
+import { NavBarLink, TOKEN, USER_LOGIN } from "../../configs/config";
 
 export default function NavbarHome() {
   const [showBar, setShowBar] = useState(false);

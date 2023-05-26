@@ -1,5 +1,5 @@
 import axios from "axios";
-import { TMDB, CYBER_SOFT, TOKEN } from "../utils/config";
+import { TMDB, CYBER_SOFT, TOKEN } from "../configs/config";
 
 class CyberSoftServices {
   get = (url) =>

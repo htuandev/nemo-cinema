@@ -4,10 +4,11 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Navigate, Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import bg from "../../images/bg.jpg";
 import { LoginAction } from "../../redux/actions";
 import { AntDesignForm, AntDesignFormItem } from "../../styles/AntDesign";
 import { StyledButton } from "../../styles/Styles";
-import { NEMO, USER_LOGIN } from "../../utils/config";
+import { NEMO, USER_LOGIN } from "../../configs/config";
 
 export default function Login() {
   document.title = `Log In Now - ${NEMO}`;
@@ -65,7 +66,7 @@ export default function Login() {
 const S = {
   Box: styled.div`
        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("images/bg.jpg");
+      url(${bg});
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;

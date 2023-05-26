@@ -4,15 +4,17 @@ import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 import { Breakpoints } from "../../styles/Breakpoints";
 import { getPersonAction } from "../../redux/actions";
-import { BASE_API_PERSON_URL } from "../../utils/config";
+import { BASE_API_PERSON_URL } from "../../configs/config";
+import male from "../../images/people-male.svg";
+import female from "../../images/people-female.svg";
 import moment from "moment";
 import { Container, SectionTitle } from "../../styles/Styles";
 import { MovieCardV3 } from "../../components/MovieCard/V3/MovieCardV3";
-import { LoadingPageV0} from "../../components/Loading/Loading";
+import { LoadingPageV0 } from "../../components/Loading/Loading";
 
 export default function Person() {
   const { person, acting } = useSelector((state) => state.PeopleReducer);
-   const isLoading = useSelector((state) => state.LoadingReducer.isLoading);
+  const isLoading = useSelector((state) => state.LoadingReducer.isLoading);
 
   const dispatch = useDispatch();
   const params = useParams();
@@ -138,9 +140,9 @@ export default function Person() {
                 <S.Image
                   src={
                     person.profile_path === null && person.gender === 1
-                      ? "/images/people-female.svg"
+                      ? female
                       : person.profile_path === null
-                      ? "/images/people-male.svg"
+                      ? male
                       : BASE_API_PERSON_URL + person.profile_path
                   }
                   alt={person.name}

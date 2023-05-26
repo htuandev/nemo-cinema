@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NEMO } from "../../utils/config";
+import { NEMO } from "../../configs/config";
 import { getNewsListAction } from "../../redux/actions";
 import { Heading, Container } from "../../styles/Styles";
 import { NewsCardV1 } from "../../components/NewsCard/NewsCardV1";

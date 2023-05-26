@@ -2,6 +2,7 @@ import * as S from "./MovieCardV1Element";
 import { FaPlay } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import getVideoId from "get-video-id";
+import noImage from "../../../images/no-image.svg";
 import LazyLoad from "react-lazyload";
 
 export const MovieCardV1 = ({ movie, isRSlick = false }) => {
@@ -18,7 +19,7 @@ export const MovieCardV1 = ({ movie, isRSlick = false }) => {
                 loading="lazy"
               />
             ) : (
-              <S.NoPoster src="/images/no-image.svg" alt="no-image" loading="lazy" />
+              <S.NoPoster src={noImage} alt="no-image" loading="lazy" />
             )}
             <S.Play>
               <S.Button

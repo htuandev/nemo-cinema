@@ -8,7 +8,7 @@ import {
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import getVideoId from "get-video-id";
-import BannerList from "../../utils/BannerList";
+import BannerList from "../../configs/BannerList";
 
 export default function Banner() {
   const dispatch = useDispatch();

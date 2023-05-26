@@ -6,7 +6,7 @@ import {
   getTotalTickets,
   getUserListAction,
 } from "../../redux/actions";
-import { NEMO } from "../../utils/config";
+import { NEMO } from "../../configs/config";
 import { FaUserFriends } from "react-icons/fa";
 import { MdMovie } from "react-icons/md";
 import { BsNewspaper } from "react-icons/bs";

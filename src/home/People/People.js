@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { BASE_API_PERSON_URL, NEMO } from "../../utils/config";
+import male from "../../images/people-male.svg";
+import female from "../../images/people-female.svg";
+import { BASE_API_PERSON_URL, NEMO } from "../../configs/config";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getActorList } from "../../redux/actions";
@@ -49,9 +51,9 @@ export default function People() {
                       <S.Image
                         src={
                           person.profile_path === null && person.gender === 1
-                            ? "/images/people-female.svg"
+                            ? female
                             : person.profile_path === null
-                            ? "/images/people-male.svg"
+                            ? male
                             : `${BASE_API_PERSON_URL}${person.profile_path}`
                         }
                         alt={person.name}

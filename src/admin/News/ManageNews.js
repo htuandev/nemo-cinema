@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { SweetAlertWarning } from "../../models/models";
 import { deleteNewsAction, getNewsListAction } from "../../redux/actions";
-import { NEMO } from "../../utils/config";
+import { NEMO } from "../../configs/config";
 import moment from "moment";
 import { Tag } from "antd";
 import Swal from "sweetalert2";

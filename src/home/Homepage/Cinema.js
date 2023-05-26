@@ -1,4 +1,10 @@
 import React from "react";
+import CGV from "../../images/cinema/cgv.png";
+import CineStar from "../../images/cinema/cinestar.png";
+import GalaxyCinema from "../../images/cinema/galaxycine.png";
+import BHDStar from "../../images/cinema/bhdstar.png";
+import LotteCinema from "../../images/cinema/lottecinema.png";
+import MegaGS from "../../images/cinema/megagscinemas.png";
 import styled from "styled-components";
 import {
   ReactSlick,
@@ -66,32 +72,32 @@ const settings = {
 const CinemaList = [
   {
     name: "CGV",
-    src: "/images/cinema/cgv.png",
+    src: CGV,
     url: "https://www.cgv.vn/",
   },
   {
     name: "Cine Star",
-    src: "/images/cinema/cinestar.png",
+    src: CineStar,
     url: "https://cinestar.com.vn/",
   },
   {
     name: "Galaxy Cinema",
-    src: "/images/cinema/galaxycine.png",
+    src: GalaxyCinema,
     url: "https://www.galaxycine.vn/",
   },
   {
     name: "BHD Star",
-    src: "/images/cinema/bhdstar.png",
+    src: BHDStar,
     url: "https://www.bhdstar.vn/",
   },
   {
     name: "Lotte Cinema",
-    src: "/images/cinema/lottecinema.png",
+    src: LotteCinema,
     url: "https://www.lottecinemavn.com/LCHS/index.aspx",
   },
   {
     name: "Mega GS",
-    src: "/images/cinema/megagscinemas.png",
+    src: MegaGS,
     url: "https://www.megagscinemas.vn/",
   },
 ];

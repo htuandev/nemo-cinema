@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { NEMO, GROUPID } from "../../utils/config";
+import { NEMO, GROUPID } from "../../configs/config";
 import * as Yup from "yup";
 import moment from "moment";
 import { Container, Heading, StyledButton } from "../../styles/Styles";

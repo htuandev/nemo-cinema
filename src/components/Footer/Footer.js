@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { AUTHOR, AUTHOR_URL } from "../../utils/config";
+import { AUTHOR, AUTHOR_URL } from "../../configs/config";
 
 export default function Footer() {
   return (

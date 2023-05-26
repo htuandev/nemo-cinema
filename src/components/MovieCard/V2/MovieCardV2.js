@@ -1,6 +1,7 @@
 import * as S from "./MovieCardV2Element";
 import { Link } from "react-router-dom";
 import moment from "moment";
+import noImage from "../../../images/no-image.svg";
 import LazyLoad from "react-lazyload";
 
 export const MovieCardV2 = ({ movie }) => (
@@ -9,7 +10,7 @@ export const MovieCardV2 = ({ movie }) => (
       <S.Wrapper>
         <Link to={`/movie/${movie.biDanh}-${movie.maPhim}/`} target="_top">
           <S.Poster
-            src={movie.hinhAnh !== "" ? movie.hinhAnh : "/images/no-image.svg"}
+            src={movie.hinhAnh !== "" ? movie.hinhAnh : noImage}
             alt={movie.tenPhim}
             loading="lazy"
           />

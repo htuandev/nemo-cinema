@@ -1,6 +1,7 @@
 import moment from "moment";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import noImage from "../../images/no-image.svg";
 import { Breakpoints } from "../../styles/Breakpoints";
 import LazyLoad from "react-lazyload";
 
@@ -10,7 +11,7 @@ export const NewsCardV1 = ({ news }) => (
       <NewsCard.Box>
         <Link to={`/news/${news.titleUrl}/`} target="_parent">
           <NewsCard.Image
-            src={news.imageUrl !== "" ? news.imageUrl : "/images/no-image.svg"}
+            src={news.imageUrl !== "" ? news.imageUrl : noImage}
             alt={news.title}
             loading="lazy"
           />
@@ -22,7 +23,10 @@ export const NewsCardV1 = ({ news }) => (
           <div>
             <NewsCard.Excerpt>{news.excerpt}</NewsCard.Excerpt>
             <NewsCard.Published>
-              published {moment(news.published, "DD/MM/YYYY HH:mm").startOf("hour").fromNow()}
+              published{" "}
+              {moment(news.published, "DD/MM/YYYY HH:mm")
+                .startOf("hour")
+                .fromNow()}
             </NewsCard.Published>
           </div>
         </NewsCard.Content>
@@ -63,7 +67,6 @@ const NewsCard = {
     flex-direction: column;
     justify-content: space-around;
     padding: 2rem;
-
   `,
 
   Col: styled.div``,

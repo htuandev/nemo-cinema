@@ -6,7 +6,7 @@ import {
   PersonModel,
   UserModel,
 } from "../models/models";
-import { GROUPID, TOKEN, USER_LOGIN } from "../utils/config";
+import { GROUPID, TOKEN, USER_LOGIN } from "../configs/config";
 
 let user = {};
 

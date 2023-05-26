@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Breakpoints } from "../../styles/Breakpoints";
 import LazyLoad from "react-lazyload";
 import { LoadingCardV1 } from "../../components/Loading/Loading";
+import noImage from "../../images/no-image.svg";
 import { Link } from "react-router-dom";
 import { NewsModel } from "../../models/models";
 import { newsService } from "../../services/newsServices";
@@ -48,7 +49,7 @@ export default function News() {
                   {news.imageUrl !== "" ? (
                     <Card.Img src={news.imageUrl} />
                   ) : (
-                    <Card.NoImg src="/images/no-image.svg" />
+                    <Card.NoImg src={noImage} />
                   )}
                   <Card.Title>
                     <Link to={`/news/${news.titleUrl}`} target="_parent">

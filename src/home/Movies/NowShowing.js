@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NEMO } from "../../utils/config";
+import { NEMO } from "../../configs/config";
 import { getMoviesListAction } from "../../redux/actions";
 import {
   Heading,

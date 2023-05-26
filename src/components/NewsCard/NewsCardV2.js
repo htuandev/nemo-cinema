@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import noImage from "../../images/no-image.svg";
 import LazyLoad from "react-lazyload";
 
 export const NewsCardV2 = ({ news }) => (
@@ -8,7 +9,7 @@ export const NewsCardV2 = ({ news }) => (
       <NewsCard.Box>
         <Link to={`/news/${news.titleUrl}/`} target="_parent">
           <NewsCard.Image
-            src={news.imageUrl !== "" ? news.imageUrl : "/images/no-image.svg"}
+            src={news.imageUrl !== "" ? news.imageUrl : noImage}
             alt={news.title}
             loading="lazy"
           />
@@ -27,6 +28,11 @@ const NewsCard = {
     overflow: hidden;
     animation: fade-in 1s ease-in-out 0s;
     height: 100%;
+    margin-bottom: 1.5rem;
+
+    :last-child {
+      margin-bottom: 0;
+    }
   `,
   Box: styled.div`
     background: var(--color-secondary);
@@ -53,6 +59,7 @@ const NewsCard = {
     -webkit-line-clamp: 2;
     font-size: 1.2rem;
     font-weight: 600;
+    margin-bottom: 0.5rem;
     color: #fff;
 
     :hover {

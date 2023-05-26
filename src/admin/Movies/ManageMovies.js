@@ -1,7 +1,7 @@
 import { Tag } from "antd";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NEMO } from "../../utils/config";
+import { NEMO } from "../../configs/config";
 import { getMoviesListAction, deleteMovieAction } from "../../redux/actions";
 import {
   AiOutlineEdit,

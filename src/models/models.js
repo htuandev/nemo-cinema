@@ -1,4 +1,4 @@
-import { GROUPID } from "../utils/config";
+import { GROUPID } from "../configs/config";
 
 class Cinema {
   cumRapChieu = [];

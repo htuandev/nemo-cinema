@@ -1,12 +1,12 @@
 <h1 align="center">Nemo Cinema</h1>
 
-<h3 align="center">URL: <a href="https://nemocinema.vercel.app/" target="_blank">https://nemocinema.vercel.app/</a></h3>
+<h3 align="center">URL: <a href="https://cinema.tuanhngf.dev/" target="_blank">https://cinema.tuanhngf.dev/</a></h3>
 
 <h3 align="center">
   <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
   <a href="#sparkles-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#sparkles-demo">Demo</a> &#xa0; | &#xa0; 
-  <a href="https://anhtuan.vercel.app/">Author</a>
+  <a href="https://cinema.tuanhngf.dev/">Author</a>
 </h3>
 
 <h3 align="center">API from 
@@ -43,9 +43,9 @@
 - Styled Components
 
 ## :sparkles: Demo
-[![home](public/images/preview/home.jpg)](https://nemocinema.vercel.app/)
+[![home](public/preview/home.jpg)](https://cinema.tuanhngf.dev/)
 
-[![admin](public/images/preview/admin.jpg)](https://nemocinema.vercel.app/admin)
+[![admin](public/preview/admin.jpg)](https://cinema.tuanhngf.dev/admin)
 
 <p align="right">
 <a href="#top">Back to Top</a>

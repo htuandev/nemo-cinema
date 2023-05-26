@@ -4,10 +4,11 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Navigate, Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import bg from "../../images/bg.jpg";
 import * as Yup from "yup";
 import { AntDesignForm, AntDesignFormItem } from "../../styles/AntDesign";
 import { StyledButton } from "../../styles/Styles";
-import { GROUPID, NEMO, USER_LOGIN } from "../../utils/config";
+import { GROUPID, NEMO, USER_LOGIN } from "../../configs/config";
 import { RegisterAction } from "../../redux/actions";
 
 export default function SignUp() {
@@ -178,7 +179,7 @@ export default function SignUp() {
 const S = {
   Box: styled.div`
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("images/bg.jpg");
+      url(${bg});
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;

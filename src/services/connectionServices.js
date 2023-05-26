@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_CONNECTION } from "../utils/config";
+import { API_CONNECTION } from "../configs/config";
 
 class ConnectionService {
   get = () => {

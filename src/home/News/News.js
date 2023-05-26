@@ -1,6 +1,7 @@
 import moment from "moment";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import noImage from "../../images/no-image.svg";
 import { useNavigate, useParams } from "react-router-dom";
 import { Container, SectionTitle } from "../../styles/Styles";
 import { Breakpoints } from "../../styles/Breakpoints";
@@ -9,13 +10,12 @@ import styled from "styled-components";
 import { NewsCardV2 } from "../../components/NewsCard/NewsCardV2";
 import { LoadingPageV0 } from "../../components/Loading/Loading";
 
-
 export default function News() {
   const news = useSelector((state) => state.NewsReducer.news);
   const latest = useSelector((state) => state.NewsReducer.newsList);
   const popular = latest.filter((news) => news.popular === true);
   const trending = latest.filter((news) => news.trending === true);
-   const isLoading = useSelector((state) => state.LoadingReducer.isLoading);
+  const isLoading = useSelector((state) => state.LoadingReducer.isLoading);
 
   const dispatch = useDispatch();
   const params = useParams();
@@ -48,10 +48,13 @@ export default function News() {
                 <S.Title>{news.title}</S.Title>
                 <S.Excerpt>{news.excerpt}</S.Excerpt>
                 <S.Published>
-                published {moment(news.published, "DD/MM/YYYY HH:mm").startOf("hour").fromNow()}
+                  published{" "}
+                  {moment(news.published, "DD/MM/YYYY HH:mm")
+                    .startOf("hour")
+                    .fromNow()}
                 </S.Published>
                 <S.Image
-                  src={news.imageUrl !== "" ? news.imageUrl : "/images/no-image.svg"}
+                  src={news.imageUrl !== "" ? news.imageUrl : noImage}
                   alt={news.title}
                 />
               </S.ArticleHeader>
