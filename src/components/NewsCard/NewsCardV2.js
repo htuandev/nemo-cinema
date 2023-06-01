@@ -28,7 +28,6 @@ const NewsCard = {
     overflow: hidden;
     animation: fade-in 1s ease-in-out 0s;
     height: 100%;
-    margin-bottom: 1.5rem;
 
     :last-child {
       margin-bottom: 0;
